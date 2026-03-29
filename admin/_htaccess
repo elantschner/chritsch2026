@@ -1,0 +1,5 @@
+# .htaccess-Datei für Web-Verzeichnis /Admin
+AuthType Basic
+AuthName "Admin-Bereich"
+AuthUserFile 	/var/www/vhosts/7/139655/webspace/httpdocs/chritsch.at/admin/.htuser
+Require user  admin@chritsch.at

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -L --max-time 30 -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://photos.google.com/share/AF1QipOY4mUFZqJJSwshVHxIQhydN632N_AljXs0dqNJxyYSh-3kldg6T_NjUDe-ZTzjSg?key=dXVNQW9sUVdkdk1oTV9MMHU0R2RaTmdkZkwxeWNR\")"
+    ]
+  }
+}

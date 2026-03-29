@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Admin CSS – chritsch2026
+   Basiert auf dem Design der Hauptseite
+   ========================================================================== */
+
+:root {
+  --color-primary:    #1a3a5c;
+  --color-accent:     #e8710a;
+  --color-dark:       #111827;
+  --color-light:      #f8f9fa;
+  --color-white:      #ffffff;
+  --color-text:       #374151;
+  --color-text-light: #6b7280;
+  --color-border:     #e5e7eb;
+  --font-heading:     'Montserrat', sans-serif;
+  --font-body:        'Open Sans', sans-serif;
+  --radius:           8px;
+  --shadow:           0 2px 12px rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-text);
+  background: #f1f3f6;
+  line-height: 1.6;
+}
+
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.admin-header {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 1rem max(1.5rem, calc((100% - 1600px) / 2 + 1.5rem));
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.admin-header h1 { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: #fff; }
+.admin-header a { color: rgba(255,255,255,0.85); }
+.admin-header a:hover { color: #fff; text-decoration: none; }
+.admin-header i { color: var(--color-accent); }
+
+/* Container */
+.admin-container {
+  max-width: 1600px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Nav Cards (index) */
+.admin-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.admin-nav-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.admin-nav-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+.admin-nav-card i { font-size: 2rem; color: var(--color-accent); display: block; margin-bottom: 0.75rem; }
+
+/* Content Card */
+.admin-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+.admin-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* Layout */
+.admin-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+@media (max-width: 768px) { .admin-grid { grid-template-columns: 1fr; } }
+
+/* Forms */
+label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+label:first-child { margin-top: 0; }
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  background: var(--color-white);
+  transition: border-color 0.2s;
+}
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+textarea { resize: vertical; min-height: 120px; }
+
+input[type="file"] {
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+}
+
+/* Buttons */
+.btn, input[type="submit"], button {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius);
+  border: none;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+input[type="submit"], .btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+input[type="submit"]:hover, .btn-primary:hover {
+  background: #142d49;
+  transform: translateY(-1px);
+}
+button, .btn-secondary {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+button:hover, .btn-secondary:hover { background: #d1d5db; }
+
+.btn-danger { background: #dc2626; color: #fff; }
+.btn-danger:hover { background: #b91c1c; }
+
+.btn-group { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
+
+/* Preview image */
+.admin-img-preview {
+  width: 50%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-light);
+}
+
+/* List */
+.admin-list { list-style: none; }
+.admin-list li {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.88rem;
+}
+.admin-list li:last-child { border-bottom: none; }
+.admin-list li:hover { background: var(--color-light); border-radius: 4px; }
+.admin-list .list-title { font-weight: 600; color: var(--color-text); }
+.admin-list .list-date { color: var(--color-text-light); font-size: 0.78rem; }
+.admin-list .list-actions { display: flex; gap: 0.5rem; margin-top: 0.25rem; }
+.admin-list a { font-size: 0.8rem; color: var(--color-primary); }
+.del { font-size: 0.8rem; color: #dc2626; cursor: pointer; }
+.del:hover { text-decoration: underline; }
+
+/* Alerts */
+.admin-alert {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.admin-alert--success { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+.admin-alert--error   { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+/* HR */
+hr { border: none; border-top: 1px solid var(--color-border); margin: 1.5rem 0; }
