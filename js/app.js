@@ -611,4 +611,10 @@ document.addEventListener('DOMContentLoaded', () => {
   Portfolio.init();
   ContactForm.init();
   Lightbox.init();
+
+  document.querySelectorAll('.usp-card video.usp-card__bg').forEach(video => {
+    const card = video.closest('.usp-card');
+    card.addEventListener('mouseenter', () => video.play());
+    card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+  });
 });

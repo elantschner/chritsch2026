@@ -19,7 +19,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
 
   <!-- App CSS -->
-  <link href="css/style.css?v=2" rel="stylesheet">
+  <link href="css/style.css?v=3" rel="stylesheet">
 
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" href="images/hmscreen.png">
@@ -83,7 +83,9 @@
 
     <!-- BiSki-Guiding -->
     <div class="usp-card usp-card--biskiguiding">
-      <div class="usp-card__bg" style="background-image:url(images/biski1.jpeg)" role="img" aria-label="BiSki-Guiding"></div>
+      <video class="usp-card__bg" muted loop playsinline aria-label="BiSki-Guiding">
+        <source src="videos/v2_watermarked-d90807ec-f723-4c10-b230-3c4cc4cc5a1a.mp4" type="video/mp4">
+      </video>
       <div class="usp-card__overlay"></div>
       <div class="usp-card__content">
         <span class="usp-card__tag">Winter 2025/26</span>
@@ -702,6 +704,9 @@
       <a href="https://www.garmin.com/de-AT/" target="_blank" rel="noopener">
         <img src="images/links/garmin.jpg" alt="Garmin" loading="lazy">
       </a>
+      <a href="https://huberbauer.info/" target="_blank" rel="noopener">
+        <img src="images/links/huberbauerhof-berwang.jpg" alt="Huberbauerhof Berwang" loading="lazy">
+      </a>
     </div>
   </div>
 </section>
@@ -811,7 +816,7 @@
 <style>.visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
 
 <!-- App JS -->
-<script src="js/app.js?v=2" defer></script>
+<script src="js/app.js?v=3" defer></script>
 
 </body>
 </html>
