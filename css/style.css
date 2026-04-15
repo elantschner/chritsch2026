@@ -1536,7 +1536,7 @@ footer {
 }
 
 /* 1200px – partner wrap */
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .partner-flex,
   .partner-logos-row { flex-wrap: wrap; }
 }
